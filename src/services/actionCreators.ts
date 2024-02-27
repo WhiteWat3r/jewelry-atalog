@@ -13,7 +13,7 @@ interface APIResponse {
 
 async function sendRequest(action: string, params?: any, retriesLeft = 3): Promise<any> {
   try {
-    const response = await fetch(`https://cors-anywhere.herokuapp.com/${API_URL}`, {
+    const response = await fetch(API_URL, {
       headers: {
         'X-Auth': hashedAuthString,
         'Content-Type': 'application/json',
@@ -34,6 +34,7 @@ async function sendRequest(action: string, params?: any, retriesLeft = 3): Promi
     return result.result;
   } catch (error) {
     // console.log('Ошибка: ', error);
+
     if (retriesLeft > 0) {
       return sendRequest(action, params, retriesLeft - 1);
     } else {
