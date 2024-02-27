@@ -13,7 +13,7 @@ interface APIResponse {
 
 async function sendRequest(action: string, params?: any, retriesLeft = 3): Promise<any> {
   try {
-    const response = await fetch(API_URL, {
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/${API_URL}`, {
       headers: {
         'X-Auth': hashedAuthString,
         'Content-Type': 'application/json',
