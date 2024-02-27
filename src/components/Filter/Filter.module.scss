@@ -1,0 +1,31 @@
+@import '../../style/colors.scss';
+
+.filter {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 17px;
+    line-height: 33px;
+    font-weight: 700;
+  }
+
+  &__input {
+    border-radius: 8px;
+    height: 30px;
+    border: 1px solid $border-input;
+    padding: 0 10px;
+    margin-bottom: 15px;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}

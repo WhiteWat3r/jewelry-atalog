@@ -1,0 +1,26 @@
+@import '../../style/colors.scss';
+
+.button {
+  border-radius: 16px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &_type {
+    &_primary {
+      color: white;
+      background-color: $default-grey;
+    }
+
+    &_secondary {
+      background-color: white;
+      color: $default-grey;
+    }
+  }
+}

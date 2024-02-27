@@ -1,0 +1,77 @@
+@import '../../style/colors.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 22px;
+
+  &__item {
+    border-radius: 12px;
+    padding: 0 10px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}
+
+.toThePage {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  position: relative;
+  align-items: center;
+}
+.currentPage {
+  border-radius: 12px;
+  border: 1px solid $border-input;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  max-width: 187px;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.setPageButton {
+  position: absolute;
+  background-color: $default-grey;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  border: none;
+
+  &:disabled {
+    background-color: #d4cfcf;
+    pointer-events: none;
+    cursor: default;
+  }
+}
